@@ -5,9 +5,9 @@ Please read all the instructions carefully before starting.
 
 Email research -at- wingman-sw.com with questions or suggestions.  
 
-Please type you name and email address. When you press test it 
-will be saved.  I won't spam you, but may email you about 
-your exercise.
+Please type your name and email address. When you press test your 
+information will be saved.  I won't spam you, but may email you about 
+your exercise and what I discover.
 
 Your name: 
 Email: 
@@ -42,7 +42,9 @@ www.wingman-sw.com/files/cyber-dojo/CircularBuffer.pdf
 Starting point
 --------------
 The CircularBuffer interface is defined in CircularBuffer.h.
-You must develop to that interface.  The architects said so.
+You must develop your implementation to that interface.  
+The architects said so.
+
 You have all the files you need, and should not need to
 add files or modify the makefile.
 
@@ -63,7 +65,7 @@ code, and are going to start testing, set the variable to
 'testing'. Once you are satisfied that your code works, set it 
 to 'working'. 
 
-Email research -at- wingman-sw.com when you have completed you
+Email research -at- wingman-sw.com when you have completed your
 CircularBuffer.
 
 Controlling the cyber-dojo test environment
