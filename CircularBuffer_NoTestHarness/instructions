@@ -1,4 +1,4 @@
-#- Copyright (c) 2018 James Grenning --- All rights reserved
+#- Copyright (c) 2018 James Grenning --- See license.txt
 
 Please read all the instructions carefully before starting.  
 
@@ -21,13 +21,13 @@ Requirements
 * It stores integers.
 * It is FIFO.
 * It can report its total capacity
-* It can report it is empty
-* It can report it is full
+* It can report if it is empty
+* It can report if it is full
 * Putting to a full CircularBuffer
   * returns false
   * loses no prior values
 * Getting from an empty CircularBuffer returns a
-  default value provided during create.
+  default value provided during create function.
 
 For this exercise, do not worry about:
 --------------------------------------
@@ -40,10 +40,10 @@ www.wingman-sw.com/files/cyber-dojo/CircularBuffer.pdf
 
 Starting point
 --------------
-You have the CircularBuffer interface in CircularBuffer.h.
+The CircularBuffer interface is defined in CircularBuffer.h.
 You must develop to that interface.  The architects said so.
 You have all the files you need, and should not need to
-change 
+add files or modify the makefile.
 
 Instructions
 ------------
@@ -52,10 +52,11 @@ Pressing the 'test' button saves, builds and then runs your code.
 
 Write CircularBuffer.c.  Once it compiles, test that the
 CircularBuffer is working.  Use the provided main.c to exercise
-your CircularBuffer.  Feel free to use printf of whatever you
+your CircularBuffer.  Feel free to use printf or whatever you
 would normally do.  Do not use any unit test framework.
+Please do all your work in this cyber-dojo environment.
 
-Note in main.c that there is a 'exercise_state' variable.
+NOTE: In main.c that there is a 'exercise_state' variable.
 It is initially set to 'writing'.  Once you finish writing
 code, and are going to start testing, set the variable to
 'testing'. Once you are satisfied that your code works, set it 
@@ -66,9 +67,12 @@ CircularBuffer.
 
 Controlling the cyber-dojo test environment
 -------------------------------------------
-Cyber-dojo does not work so great with IE, so please use another browser.
+Cyber-dojo does not work so great with IE, so please use 
+Chrome, Firefox, Safari, or another browser.
 
-Compile and run main.c by pressing the 'test' button.  Shortcut key alt-t.
+Compile and run main.c by pressing the 'test' button.  The
+shortcut key is alt-t.
 
-If you need to do a clean build, edit cyber-dojo.sh.  You'll see commented
-out code to make clean.
+If you need to do a clean build, edit cyber-dojo.sh to make clean.
+You'll see commented out code in cyber-dojo.sh to make clean.
+

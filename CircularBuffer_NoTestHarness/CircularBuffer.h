@@ -1,4 +1,4 @@
-//- Copyright (c) 2018 James Grenning --- All rights reserved
+//- Copyright (c) 2018 James Grenning --- See license.txt
 
 #ifndef CIRCULAR_BUFFER_INCLUDED
 #define CIRCULAR_BUFFER_INCLUDED

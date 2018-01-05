@@ -1,4 +1,4 @@
-//- Copyright (c) 2018 James Grenning --- All rights reserved
+//- Copyright (c) 2018 James Grenning  --- See license.txt
 
 #include <stdio.h>
 #include "CircularBuffer.h"
