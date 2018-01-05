@@ -1,0 +1,22 @@
+{
+  "runner_choice" : "stateful",
+
+  "visible_filenames": [ 
+    "main.c",
+    "CircularBuffer.c",
+    "CircularBuffer.h",
+    "cyber-dojo.sh",
+    "instructions",
+    "makefile"
+  ],
+  
+  "highlight_filenames": [ 
+    "instructions", 
+    "CircularBuffer.c",
+    "CircularBuffer.h",
+    "main.c"
+  ],
+
+  "display_name": "C no test harness, CircularBuffer",
+  "image_name": "cyberdojofoundation/gcc_googletest"
+}
