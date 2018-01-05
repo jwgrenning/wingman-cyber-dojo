@@ -1,4 +1,4 @@
-//- Copyright (c) 2018 James Grenning --- See license.txt
+//- Copyright (c) 2018 James Grenning -- See license.txt at https://github.com/jwgrenning/wingman-cyber-dojo
 
 #include "CircularBuffer.h"
 #include <stdlib.h>
