@@ -5,12 +5,25 @@ Please read all the instructions carefully before starting.
 
 Email research -at- wingman-sw.com with questions or suggestions.  
 
-Please type your name and email address. When you press test your 
-information will be saved.  I won't spam you, but may email you about 
-your exercise and what I discover.
+About you
+---------
+Please add some information about youself when you start the
+exercise. Pressing the 'test' button saves all
+your edits.  I won't spam you, but may email you about 
+your exercise and what I discover.  I will not reveal your 
+name, unless you want me too.  If you choose to tweet about
+the exercise, please tag me @jwgrenning.
 
-Your name: 
+Name: 
 Email: 
+Your level of C experience (delete choices that are not you):
+- I program in C everyday
+- I have programmed in C recently
+- I have programmed in C, but not recently
+- I programmed in C long long ago
+- I never programmed in C
+Please say something about your engineering/programming background:
+
 
 Objective
 ---------
@@ -34,6 +47,7 @@ For this exercise, do not worry about:
 --------------------------------------
 * Null pointers
 * Concurrency
+* malloc or calloc failures
 
 CircularBuffer Diagram
 ----------------------
@@ -66,7 +80,7 @@ code, and are going to start testing, set the variable to
 to 'working'. 
 
 Email research -at- wingman-sw.com when you have completed your
-CircularBuffer.
+CircularBuffer.  Tell your friends!
 
 Controlling the cyber-dojo test environment
 -------------------------------------------

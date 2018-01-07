@@ -17,7 +17,7 @@ int main(int ac, char** av)
     struct CircularBuffer * b = CircularBuffer_Create(capacity, empty_value);
     CircularBuffer_Destroy(b);
 
-    printf("%s code\n", exercise_state);
+    printf("%s\n", exercise_state);
     return 0;
 }
 
