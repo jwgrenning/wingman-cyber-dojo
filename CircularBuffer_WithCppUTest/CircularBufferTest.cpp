@@ -12,11 +12,13 @@ extern "C"
 TEST_GROUP(CircularBuffer)
 {
     CircularBuffer * buffer;
+    unsigned int capacity = 10;
+    int empty_value = -1;
 
     // setup runs before each test
     void setup()
     {
-        buffer = CircularBuffer_Create(10, -42);
+        buffer = CircularBuffer_Create(capacity, empty_value);
     }
 
     // teardown runs after each test
