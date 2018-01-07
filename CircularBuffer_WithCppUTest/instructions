@@ -1,0 +1,104 @@
+Copyright (c) 2018 James Grenning -- See license.txt
+at https://github.com/jwgrenning/wingman-cyber-dojo
+
+Please read all the instructions carefully before starting.  
+
+Email research -at- wingman-sw.com with questions or suggestions.  
+
+About you
+---------
+Please add some information about youself when you start the
+exercise. Pressing the 'test' button saves all
+your edits.  I won't spam you, but may email you about 
+your exercise and what I discover.  I will not reveal your 
+name, unless you want me too.  If you choose to tweet about
+the exercise, please tag me @jwgrenning.
+
+Name: 
+Email: 
+Your level of C experience (delete choices that are not you):
+- I program in C everyday
+- I have programmed in C recently
+- I have programmed in C, but not recently
+- I programmed in C long long ago
+- I never programmed in C
+
+Will you do (please delete all but one choice):
+- test-driven
+- test-first
+- test-after
+- test-when-i-feel-like-it 
+
+Please say something about your engineering/programming experience:
+
+
+
+Objective
+---------
+Write a CircularBuffer module in c and make sure it works.
+
+Requirements
+------------
+* A CircularBuffer is sized during create.
+* It stores integers.
+* It is FIFO.
+* It can report its total capacity
+* It can report if it is empty
+* It can report if it is full
+* Putting to a full CircularBuffer
+  * returns false
+  * loses no prior values
+* Getting from an empty CircularBuffer returns a
+  default value provided during create function.
+
+For this exercise, do not worry about:
+--------------------------------------
+* Null pointers
+* Concurrency
+* malloc or calloc failures
+
+CircularBuffer Diagram
+----------------------
+www.wingman-sw.com/files/cyber-dojo/CircularBuffer.pdf
+
+Starting point
+--------------
+The CircularBuffer interface is defined in CircularBuffer.h.
+You must develop your implementation to that interface.  
+The architects said so.
+
+You have all the files you need, and should not need to
+add files or modify the makefile.
+
+Instructions
+------------
+Do all your work from within this cyber-dojo environment.
+Pressing the 'test' button saves, builds and then runs your code.
+
+Write CircularBuffer.c.  Once it compiles, test that the
+CircularBuffer is working.  Use the provided main.c to exercise
+your CircularBuffer.
+
+Please do all your work in this cyber-dojo environment.
+
+NOTE: In AllTests.cpp, there is a 'exercise_state' variable.
+It is initially set to 'writing'.  Once you finish writing
+code, and are going to start testing, set the variable to
+'testing'. Once you are satisfied that your code works, set it 
+to 'working'.  If you are test-driving, there is a setting for you
+too.
+
+Email research -at- wingman-sw.com when you have completed your
+CircularBuffer.
+
+Controlling the cyber-dojo test environment
+-------------------------------------------
+Cyber-dojo does not work so great with IE, so please use 
+Chrome, Firefox, Safari, or another browser.
+
+Compile and run main.c by pressing the 'test' button.  The
+shortcut key is alt-t.
+
+If you need to do a clean build, edit cyber-dojo.sh to make clean.
+You'll see commented out code in cyber-dojo.sh to make clean.
+
