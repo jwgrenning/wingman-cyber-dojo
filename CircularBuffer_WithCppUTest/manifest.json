@@ -20,7 +20,7 @@
   ],
 
   "filename_extension" : ".c",
-  "display_name": "C CppUTest, CircularBuffer with Test Harness",
+  "display_name": "C CppUTest, CircularBuffer",
   "image_name": "cyberdojofoundation/gcc_cpputest",
 
   "progress_regexs" : [ "Errors \(.* ms\)", "OK \(.* ms\)" ]
