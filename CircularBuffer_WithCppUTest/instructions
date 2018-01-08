@@ -86,7 +86,7 @@ your CircularBuffer.
 
 Please do all your work in this cyber-dojo environment.
 
-NOTE: In AllTests.cpp, there is a 'exercise_state' variable.
+NOTE: In the main file, that there is a 'exercise_state' variable.
 It is initially set to 'writing'.  Once you finish writing
 code, and are going to start testing, set the variable to
 'testing'. Once you are satisfied that your code works, set it 

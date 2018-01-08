@@ -2,7 +2,7 @@
   "runner_choice" : "stateful",
 
   "visible_filenames": [ 
-    "AllTests.cpp",
+    "main.cpp",
     "CircularBuffer.c",
     "CircularBuffer.h",
     "CircularBufferTest.cpp",
@@ -14,6 +14,7 @@
 
   "highlight_filenames": [
     "instructions", 
+    "main.cpp",
     "CircularBuffer.c",
     "CircularBuffer.h",
     "CircularBufferTest.cpp"

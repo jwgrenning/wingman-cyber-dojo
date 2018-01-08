@@ -9,7 +9,7 @@ PROJECT_HOME_DIR = .
 
 SRC_FILES = CircularBuffer.c
 
-TEST_SRC_FILES = CircularBufferTest.cpp AllTests.cpp
+TEST_SRC_FILES = CircularBufferTest.cpp main.cpp
 
 INCLUDE_DIRS =\
   .\
