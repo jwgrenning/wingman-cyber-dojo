@@ -28,6 +28,9 @@ TEST_GROUP(CircularBuffer)
     }
 };
 
+// PUSH THE TEST BUTTON WHEN YOU START TO WORK
+// Pushing the test button saves your work and runs the build.
+
 // each test gets a fresh CurcularBuffer
 TEST(CircularBuffer, create_destroy)
 {

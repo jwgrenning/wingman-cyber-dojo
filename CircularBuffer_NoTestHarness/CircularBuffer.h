@@ -5,6 +5,8 @@
 
 #include <stdbool.h>
 
+// You should not change this file
+
 struct CircularBuffer;
 
 struct CircularBuffer * CircularBuffer_Create(unsigned int capacity, int default_value);

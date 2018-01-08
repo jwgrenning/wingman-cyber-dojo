@@ -3,9 +3,18 @@
 #ifndef CIRCULAR_BUFFER_INCLUDED
 #define CIRCULAR_BUFFER_INCLUDED
 
-typedef struct CircularBufferStruct CircularBuffer;
+#include <stdbool.h>
 
-CircularBuffer * CircularBuffer_Create(unsigned int capacity, int default_value);
-void CircularBuffer_Destroy(CircularBuffer *);
+// You should not change this file
+
+struct CircularBuffer;
+
+struct CircularBuffer * CircularBuffer_Create(unsigned int capacity, int default_value);
+void CircularBuffer_Destroy(struct CircularBuffer *);
+bool CircularBuffer_IsEmpty(struct CircularBuffer *);
+bool CircularBuffer_IsFull(struct CircularBuffer *);
+bool CircularBuffer_Put(struct CircularBuffer *, int);
+int CircularBuffer_Get(struct CircularBuffer *);
+unsigned int CircularBuffer_Capacity(struct CircularBuffer *);
 
 #endif

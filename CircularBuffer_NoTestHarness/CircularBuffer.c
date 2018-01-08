@@ -20,5 +20,5 @@ void CircularBuffer_Destroy(struct CircularBuffer * self)
     free(self);
 }
 
-
-
+// PUSH THE TEST BUTTON WHEN YOU START TO WORK
+// Pushing the test button saves your work and runs the build.
