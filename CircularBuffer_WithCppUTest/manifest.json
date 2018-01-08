@@ -11,7 +11,7 @@
     "make-gcov.sh",
     "instructions"
   ],
-  
+
   "highlight_filenames": [
     "instructions", 
     "CircularBuffer.c",

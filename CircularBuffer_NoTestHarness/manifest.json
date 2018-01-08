@@ -11,10 +11,10 @@
   ],
   
   "highlight_filenames": [ 
-    "instructions", 
+    "main.c",
     "CircularBuffer.c",
     "CircularBuffer.h",
-    "main.c"
+    "instructions"
   ],
 
   "display_name": "C no test harness, CircularBuffer",
