@@ -2,18 +2,18 @@
 
 #include "CircularBuffer.h"
 
-struct CircularBufferStruct
+struct CircularBuffer
 {
-    int place_holder_delete_me_soon;
+    int place_holder_delete_me_after_you_add_your_own_members;
 };
 
-CircularBuffer * CircularBuffer_Create(unsigned int capacity, int default_value)
+struct CircularBuffer * CircularBuffer_Create(unsigned int capacity, int default_value)
 {
-    CircularBuffer * self = (CircularBuffer *)calloc(1, sizeof(CircularBuffer));
+    struct CircularBuffer * self = (struct CircularBuffer *)calloc(1, sizeof(struct CircularBuffer));
     return self;
 }
 
-void CircularBuffer_Destroy(CircularBuffer * self)
+void CircularBuffer_Destroy(struct CircularBuffer * self)
 {
     free(self);
 }

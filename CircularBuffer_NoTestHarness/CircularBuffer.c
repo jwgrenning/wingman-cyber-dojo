@@ -6,7 +6,7 @@
 struct CircularBuffer
 {
     // keep compiler from complaining about an empty struct
-    int place_holder;
+    int place_holder_delete_me_after_you_add_your_own_members;
 };
 
 struct CircularBuffer * CircularBuffer_Create(unsigned int capacity, int default_value)
