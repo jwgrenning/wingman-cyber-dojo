@@ -1,3 +1,4 @@
+import os
 import glob
 import json
 
@@ -35,6 +36,13 @@ def critter_increments_as_csv(json_in):
     last_time = incr['time']
   return csv_lines
 
+def make_dir_for(filename):
+    if not os.path.exists(os.path.dirname(filename)):
+        try:
+            os.makedirs(os.path.dirname(filename))
+        except OSError as exc: # Guard against race condition
+            if exc.errno != errno.EEXIST:
+                raise
 
 def main():
   increments = glob.glob("kata-capture/*/*/increments.json")
@@ -42,7 +50,7 @@ def main():
     exercise = incr.split("/")[1]
     animal = incr.split("/")[2]
     output_filename = "kata-analysis/" + exercise + "-" + animal + ".csv"
-    os.makedirs(os.path.dirname(output_filename), exist_ok=True)
+    make_dir_for(output_filename)
     output = open(output_filename, "w") 
     output.write("N, signal, date, time, seconds, minutes, total seconds, total minutes\n")
     timing = open(incr, "r")
