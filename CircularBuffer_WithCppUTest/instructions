@@ -86,6 +86,10 @@ your CircularBuffer.
 
 Please do all your work in this cyber-dojo environment.
 
+If you take any breaks, please let me know the approximate 
+cycle number (upper right side of the red, green and 
+yellow traffic lights) and duration.
+
 NOTE: In the main file, that there is a 'exercise_state' variable.
 It is initially set to 'writing'.  Once you finish writing
 code, and are going to start testing, set the variable to

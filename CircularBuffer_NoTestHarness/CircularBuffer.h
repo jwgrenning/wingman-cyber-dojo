@@ -5,7 +5,9 @@
 
 #include <stdbool.h>
 
-// You should not change this file
+// You should not change this file. 
+// The struct members go only in the .c file
+// You need to implement each function
 
 struct CircularBuffer;
 

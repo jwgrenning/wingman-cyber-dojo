@@ -35,8 +35,16 @@ TEST_GROUP(CircularBuffer)
 TEST(CircularBuffer, create_destroy)
 {
     FAIL("Start here");
-// These are all the macros you will need.
-//    LONGS_EQUAL(0, 1); // will fail
-//    CHECK_TRUE(false); // will fail
-//    CHECK_FALSE(true); // will fail
+}
+
+// Each test in a group has a unique name
+// Make as many tests as you like
+TEST(CircularBuffer, test_with_all_the_macros_you_should_need_for_this_exercise)
+{
+    LONGS_EQUAL(1, 1);
+    CHECK_TRUE(true);
+    CHECK_FALSE(false);
+    // If you are not used to a xUnit style of test harness,
+    // please do the other exercise offered in the invitation.
+    // find more about CppUTest at cpputest.org
 }
