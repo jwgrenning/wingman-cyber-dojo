@@ -37,10 +37,11 @@ def critter_increments_as_csv(json_in):
 
 
 def main():
-  increments = glob.glob("kata-capture/*/increments.json")
+  increments = glob.glob("kata-capture/*/*/increments.json")
   for incr in increments:
-    animal = incr.split("/")[1]
-    output = open("kata-capture/" + animal + ".csv", "w") 
+    exercise = incr.split("/")[1]
+    animal = incr.split("/")[2]
+    output = open("kata-capture/" + exercise + "/" + animal + ".csv", "w") 
     output.write("N, signal, date, time, seconds, minutes, total seconds, total minutes\n")
     timing = open(incr, "r")
     lines = critter_increments_as_csv(json.load(timing))
