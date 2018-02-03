@@ -26,6 +26,9 @@ gcov*.html
 Releases
 cpputest
 *.sublime-*
+*.pyc
+kata-capture
+
 
 
 
