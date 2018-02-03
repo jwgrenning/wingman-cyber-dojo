@@ -5,4 +5,4 @@ fi
 exercise=$1
 dir1=${exercise:0:2}
 dir2=${exercise:2:8}
-docker cp cyber-dojo-storer:/usr/cyber-dojo/$dir1/$dir2 kata-capture/$exercise
+docker cp cyber-dojo-storer:/usr/src/cyber-dojo/katas/$dir1/$dir2 kata-capture/$exercise
