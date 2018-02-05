@@ -1,0 +1,4 @@
+N, signal, date, time, seconds, minutes, total seconds, total minutes
+1, amber, 2018-01-09, 21:18:39, 0, 0.0, 0, 0.0
+2, amber, 2018-01-09, 21:21:10, 151, 2.0, 151, 2.0
+3, amber, 2018-01-09, 21:22:20, 70, 1.0, 221, 3.0
