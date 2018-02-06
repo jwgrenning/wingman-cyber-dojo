@@ -52,9 +52,13 @@ Requirements
 * It can report if it is full
 * Putting to a full CircularBuffer
   * returns false
-  * loses no prior values
+  * preserves prior values
 * Getting from an empty CircularBuffer returns a
   default value provided during create function.
+* When you are finished, your production code should 
+  run silently; your test code can make noise.
+* Make your code clean and readble, something you'd
+  attach to your resume.
 
 For this exercise, do not worry about:
 --------------------------------------
