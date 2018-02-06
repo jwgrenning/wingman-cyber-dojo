@@ -1,6 +1,7 @@
 import os
 import glob
 import json
+import datetime
 
 def make_date(time):
   return "{:04d}-{:02d}-{:02d}".format(time[0], time[1], time[2])
@@ -9,14 +10,15 @@ def make_time(time):
   return "{:02d}:{:02d}:{:02d}".format(time[3], time[4], time[5])
 
 def time_from(seq):
-  return seq[3]*60*60 + seq[4]*60 + seq[5]
+  return datetime.datetime(seq[0], seq[1], seq[2], seq[3], seq[4], seq[5])
 
 def make_duration(last, current):
   if last == None:
     last = current
   t0 = time_from(last)
   t1 = time_from(current)
-  return '{: 6d}, {: 8.1f}'.format(t1-t0, (t1-t0)/60)
+  dt = t1 - t0
+  return '{: 6d}, {: 8.1f}'.format(dt.seconds, dt.seconds/60)
 
 def critter_increments_as_csv(json_in):
   csv_lines = ""
