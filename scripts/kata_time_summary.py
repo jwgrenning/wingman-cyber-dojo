@@ -16,7 +16,7 @@ def make_duration(last, current):
     last = current
   t0 = time_from(last)
   t1 = time_from(current)
-  return '{:d}, {:2.1f}'.format(t1-t0, (t1-t0)/60)
+  return '{: 6d}, {: 8.1f}'.format(t1-t0, (t1-t0)/60)
 
 def critter_increments_as_csv(json_in):
   csv_lines = ""
@@ -26,7 +26,7 @@ def critter_increments_as_csv(json_in):
     time_string = make_time(incr['time'])
     if t0 == None:
       t0 = incr['time']
-    csv_lines += "{0}, {1}, {2}, {3}, {4}, {5}\n".format(
+    csv_lines += "{: 3d}, {:5s}, {}, {}, {}, {}\n".format(
       incr['number'],
       incr['colour'],
       make_date(incr['time']),
