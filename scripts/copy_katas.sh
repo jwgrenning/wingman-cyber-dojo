@@ -8,5 +8,6 @@ dir1=${exercise:0:2}
 dir2=${exercise:2:8}
 docker cp cyber-dojo-storer:/usr/src/cyber-dojo/katas/$dir1/$dir2/ kata-capture/
 pushd kata-capture
+rm -rf $exercise
 mv $dir2 $exercise
 popd
