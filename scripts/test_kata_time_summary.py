@@ -28,7 +28,7 @@ class KataSummaryTest(unittest.TestCase):
       "  3, green, 2018-01-07, 11:00:31,   1801,     30.0,   2401,     40.0\n")
     self.assertEqual(expected, critter_increments_as_csv(increments))
 
-  def IGNORE_test_days_change(self):
+  def test_days_change(self):
     increments = [
       {'colour': 'amber', 'number': 1, 'time': [2018, 1, 7, 23, 00, 00]},
       {'colour': 'red',   'number': 2, 'time': [2018, 1, 8, 00, 30, 30]},
