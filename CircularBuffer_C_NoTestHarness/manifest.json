@@ -13,8 +13,7 @@
   "highlight_filenames": [ 
     "main.c",
     "CircularBuffer.c",
-    "CircularBuffer.h",
-    "CircularBuffer.h",
+      "CircularBuffer.h",
     "instructions"
   ],
 

@@ -2,7 +2,7 @@
   "runner_choice" : "stateful",
 
   "visible_filenames": [ 
-    "main.c",
+    "main.cpp",
     "CircularBuffer.cpp",
     "CircularBuffer.h",
     "cyber-dojo.sh",
@@ -11,7 +11,7 @@
   ],
   
   "highlight_filenames": [ 
-    "main.c",
+    "main.cpp",
     "CircularBuffer.cpp",
     "CircularBuffer.h",
     "instructions"
