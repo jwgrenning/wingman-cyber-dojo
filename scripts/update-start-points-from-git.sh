@@ -15,4 +15,3 @@ cp -f grafana.env $CYBER_DOJO_COMMAND_LOCATION
 
 git reset --hard
 git pull
-enable_initial_test_failure
