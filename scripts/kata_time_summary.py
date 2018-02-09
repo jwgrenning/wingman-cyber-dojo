@@ -51,10 +51,10 @@ def main():
   for incr in increments:
     exercise = incr.split("/")[1]
     animal = incr.split("/")[2]
-    output_filename = "kata-analysis/" + exercise + "-" + animal + ".csv"
-    make_dir_for(output_filename)
-    output = open(output_filename, "w") 
-    output.write("N, signal, date, time, seconds, minutes, total seconds, total minutes\n")
+    output_filename = "kata-analysis/" + exercise + "-" + animal
+    make_dir_for(output_filename + ".csv")
+    output = open(output_filename + ".csv", "w")
+    output.write(output_filename + ", signal, date, time, seconds, minutes, total seconds, total minutes\n")
     timing = open(incr, "r")
     lines = critter_increments_as_csv(json.load(timing))
     output.write(lines)

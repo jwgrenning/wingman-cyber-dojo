@@ -1,0 +1,28 @@
+{
+  "runner_choice" : "stateful",
+
+  "visible_filenames": [ 
+    "main.cpp",
+    "CircularBuffer.cpp",
+    "CircularBuffer.h",
+    "CircularBufferTest.cpp",
+    "cyber-dojo.sh",
+    "makefile",
+    "make-gcov.sh",
+    "instructions"
+  ],
+
+  "highlight_filenames": [
+    "instructions", 
+    "main.cpp",
+    "CircularBuffer.cpp",
+    "CircularBuffer.h",
+    "CircularBufferTest.cpp"
+  ],
+
+  "filename_extension" : ".c",
+  "display_name": "C++ CppUTest, CircularBuffer",
+  "image_name": "cyberdojofoundation/gcc_cpputest",
+
+  "progress_regexs" : [ "Errors \(.* ms\)", "OK \(.* ms\)" ]
+}
