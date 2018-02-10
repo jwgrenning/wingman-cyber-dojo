@@ -1,7 +1,0 @@
-078047BDCC-antelope.txt
-Wrap around did not work
-Implementation printed a bunch of stuff
-breaks totallying 120
-exercise total ~120
-
-
