@@ -1,4 +1,4 @@
-TARGET = CircularBufferTest
+TARGET = CircularBuffer_tests
 CC = gcc
 CFLAGS = -Wall
 

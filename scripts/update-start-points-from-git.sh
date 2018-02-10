@@ -1,5 +1,5 @@
 #!/bin/bash
-
+CYBER_DOJO_COMMAND_LOCATION=.
 if [ $# != 0 ] ; then
   echo "usage: $0"
   exit 1
@@ -11,7 +11,7 @@ if [ ! -f "start_point_type.json" ] ; then
 fi
 
 CYBER_DOJO_COMMAND_LOCATION=..
-cp -f grafana.env $CYBER_DOJO_COMMAND_LOCATION
+cp -f scripts/grafana.env $CYBER_DOJO_COMMAND_LOCATION
 
 git reset --hard
 git pull

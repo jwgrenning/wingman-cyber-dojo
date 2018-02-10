@@ -16,11 +16,17 @@ INCLUDE_DIRS =\
   $(CPPUTEST_HOME)/include/ \
   $(CPPUTEST_HOME)/include/Platforms/Gcc\
 
+CPPUTEST_CFLAGS += -std=c99
+CPPUTEST_CXXFLAGS += -std=c++11
+CPPUTEST_WARNINGFLAGS += -Wall 
 CPPUTEST_WARNINGFLAGS += -Werror
 CPPUTEST_WARNINGFLAGS += -Wfatal-errors
-CPPUTEST_CXXFLAGS += -Wno-reserved-id-macro
-CPPUTEST_CXXFLAGS += -Wno-keyword-macro
-CPPUTEST_CXXFLAGS += -Wno-unused-variable
+CPPUTEST_WARNINGFLAGS += -Wno-reserved-id-macro
+CPPUTEST_WARNINGFLAGS += -Wno-keyword-macro
+CPPUTEST_WARNINGFLAGS += -Wno-unused-variable
+CPPUTEST_WARNINGFLAGS += -Wno-c++98-compat-pedantic
+CPPUTEST_WARNINGFLAGS += -Wno-reserved-id-macro
+CPPUTEST_WARNINGFLAGS += -Wno-unused-parameter
 CPPUTEST_MEMLEAK_DETECTOR_NEW_MACRO_FILE = -include ./MyMemoryLeakDetectorNewMacrosFile.h
 
 include $(CPPUTEST_HOME)/build/MakefileWorker.mk

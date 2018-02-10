@@ -15,14 +15,14 @@ Choose the exercise with or without a test harness based on your usual practices
 #### CircularBuffer without a test harness
 Choose this exercise if you do not regularly use a unit test harness in your work.  Thanks! Here is the link.
 
-* [CircularBuffer without a test harness](http://research.wingman-sw.com/enter/show/2619424F5B)
+* [CircularBuffer without a test harness](http://research.wingman-sw.com/enter/show/5EAFA8256A)
 * Read the instructions carefully and then press the test button before you begin
 
 #### CircularBuffer with CppUTest
 
 Please choose this only if you regularly use a unit test harness in your work.  Thanks! Here is the link.
 
-* [CircularBuffer with CppUTest](http://research.wingman-sw.com/enter/show/CA267C2961)
+* [CircularBuffer with CppUTest]()
 * Read the instructions carefully and then press the test button before you begin
 
 #### Please tell a colleague or two about it.

@@ -10,7 +10,7 @@
 class CircularBuffer
 {
   public:
-    CircularBuffer(int capacity, int defaultValue);
+    CircularBuffer(const unsigned int capacity, const int defaultValue);
     virtual ~CircularBuffer();
 
     bool isEmpty() const;

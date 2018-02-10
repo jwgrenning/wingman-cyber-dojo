@@ -4,10 +4,10 @@
 #include <stdio.h>
 
 //please do not change these messages
-const char * writing = "I'm writing and building.";
-const char * testing = "[  FAILED  ] Testing, with more to do.";
-const char * working = "[  PASSED  ] I'm done testing and my code works!";
-const char * test_driving = "I'm test-driving.";
+static const char * writing = "I'm writing and building.";
+static const char * testing = "[  FAILED  ] Testing, with more to do.";
+static const char * working = "[  PASSED  ] I'm done testing and my code works!";
+static const char * test_driving = "I'm test-driving.";
 
 int main(int ac, char** av)
 {

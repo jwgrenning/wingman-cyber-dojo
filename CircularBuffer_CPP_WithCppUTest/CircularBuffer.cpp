@@ -5,7 +5,7 @@
 
 #include "CircularBuffer.h"
 
-CircularBuffer::CircularBuffer(int, int)
+CircularBuffer::CircularBuffer(const unsigned int capacity, const int defaultValue)
 {
 }
 
