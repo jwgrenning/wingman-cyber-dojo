@@ -2,7 +2,7 @@
   "runner_choice" : "stateful",
 
   "visible_filenames": [ 
-    "main.cpp ",
+    "main.cpp",
     "CircularBuffer.cpp",
     "CircularBuffer.h",
     "cyber-dojo.sh",
