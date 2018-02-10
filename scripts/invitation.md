@@ -38,4 +38,3 @@ As a reminder
 * When you finish, send your exercise URL to research@wingman-sw.com
 
 thanks, James
-

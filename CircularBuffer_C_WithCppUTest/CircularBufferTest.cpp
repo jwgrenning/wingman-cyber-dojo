@@ -1,6 +1,4 @@
-//- Copyright (c) 2008-2009 James Grenning
-//- All rights reserved
-//- For use by participants in Wingman Software training courses.
+//- Copyright (c) 2018 James Grenning -- See license.txt at https://github.com/jwgrenning/wingman-cyber-dojo
 
 #include "CppUTest/TestHarness.h"
 

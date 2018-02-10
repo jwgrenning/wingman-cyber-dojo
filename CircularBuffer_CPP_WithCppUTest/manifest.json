@@ -9,6 +9,7 @@
     "cyber-dojo.sh",
     "makefile",
     "make-gcov.sh",
+    "MyMemoryLeakDetectorNewMacrosFile.h",
     "instructions"
   ],
 
