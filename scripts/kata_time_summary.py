@@ -46,14 +46,14 @@ def make_dir_for(filename):
             if exc.errno != errno.EEXIST:
                 raise
 
-def main():
-  increments = glob.glob("../kata-capture/*/*/increments.json")
+def main(kata_capture_dir, kata_output_dir):
+  increments = glob.glob("../" + kata_capture_dir + "/*/*/increments.json")
   for incr in increments:
     timing = open(incr, "r")
     lines = critter_increments_as_csv(json.load(timing))
     exercise = incr.split("/")[2]
     animal = incr.split("/")[3]
-    output_filename = "kata-analysis/" + exercise + "-" + animal + "-{}".format(lines.count('\n'))
+    output_filename = kata_output_dir + "/" + exercise + "-" + animal + "-{}".format(lines.count('\n'))
     make_dir_for(output_filename + ".csv")
     output = open(output_filename + ".csv", "w")
     output.write(output_filename + ", signal, date, time, seconds, minutes, total seconds, total minutes\n")
@@ -61,7 +61,11 @@ def main():
     output.close()
 
 if __name__ == '__main__':
-    # if len(sys.argv) != 1:
-    #   print "Usage: {0} path match-string {1}".format(sys.argv[0], len(sys.argv))
-    #   exit(0)
-    main()
+    kata_capture_dir = "kata-capture"
+    kata_output_dir = "kata-analysis"
+    if len(sys.argv) >= 2:
+      kata_capture_dir = sys.argv[1]
+    if len(sys.argv) == 3:
+      kata_output_dir = sys.argv[2]
+
+    main(kata_capture_dir, kata_output_dir)
