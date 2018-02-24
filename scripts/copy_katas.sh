@@ -3,19 +3,20 @@ if [ ! -f "start_point_type.json" ] ; then
   exit 1
 fi
 
-exercises=""
-while read -r line || [[ -n "$line" ]]; do
-    echo "Text read from file: $line"
-    id=$(echo $line | cut -d',' -f1)
-    exercises=$exercises $id
-done < "scripts/kata-ids.csv"
+get_kata_ids()
+{
+  local ids=""
+  while read -r line || [[ -n "$line" ]]; do
+      id=$(echo $line | cut -d',' -f1)
+      ids+=" ${id}"
+  done < "scripts/kata-ids.csv"
+  echo $ids  
+}
 
-echo Exercises: $exercises
-
-KATA_DIR=../kata-capture
+KATA_DIR=../${1:kata-capture}
 mkdir -p $KATA_DIR
 
-for exercise in exercises; do
+for exercise in $(get_kata_ids); do
   dir1=${exercise:0:2}
   dir2=${exercise:2:8}
   docker cp cyber-dojo-storer:/usr/src/cyber-dojo/katas/$dir1/$dir2/ $KATA_DIR
