@@ -69,4 +69,5 @@ if __name__ == '__main__':
     if len(sys.argv) == 3:
       kata_output_dir = sys.argv[2]
 
+    print kata_capture_dir + " " + kata_output_dir
     main(kata_capture_dir, kata_output_dir)
