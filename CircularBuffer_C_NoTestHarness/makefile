@@ -5,6 +5,8 @@ CFLAGS = -Wall
 .PHONY: default all clean
 
 default: $(TARGET)
+	./$(TARGET)
+
 all: default
 
 OBJECTS = $(patsubst %.c, %.o, $(wildcard *.c))
@@ -17,7 +19,6 @@ HEADERS = $(wildcard *.h)
 
 $(TARGET): $(OBJECTS)
 	$(CC) $(OBJECTS) -Wall $(LIBS) -o $@
-	./$(TARGET)
 
 clean:
 	-rm -f *.o
