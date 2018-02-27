@@ -52,14 +52,18 @@ def main(kata_capture_dir, kata_output_dir):
   for incr in increments:
     timing = open(incr, "r")
     lines = critter_increments_as_csv(json.load(timing))
+    incr_count = lines.count('\n')
     exercise = incr.split("/")[2]
     animal = incr.split("/")[3]
-    output_filename = kata_output_dir + "/" + exercise + "-" + animal + "-{}".format(lines.count('\n'))
-    make_dir_for(output_filename + ".csv")
-    output = open(output_filename + ".csv", "w")
-    output.write(output_filename + ", signal, date, time, seconds, minutes, total seconds, total minutes\n")
-    output.write(lines)
-    output.close()
+    output_filename = kata_output_dir + "/" + exercise + "-" + animal + "-{}".format(incr_count)
+    if incr_count <= 5:
+      print "Skipping: " + output_filename
+    else:
+      make_dir_for(output_filename + ".csv")
+      output = open(output_filename + ".csv", "w")
+      output.write(output_filename + ", signal, date, time, seconds, minutes, total seconds, total minutes\n")
+      output.write(lines)
+      output.close()
 
 if __name__ == '__main__':
     kata_capture_dir = "kata-capture"
