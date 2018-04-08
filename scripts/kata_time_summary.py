@@ -61,7 +61,7 @@ def main(kata_capture_dir, kata_output_dir):
     else:
       make_dir_for(output_filename + ".csv")
       output = open(output_filename + ".csv", "w")
-      output.write(output_filename + ", signal, date, time, seconds, minutes, total seconds, total minutes\n")
+      output.write(output_filename + ", signal, date, time, seconds, minutes, total seconds, total minutes, discontinuity\n")
       output.write(lines)
       output.close()
 

@@ -5,7 +5,7 @@ from kata_time_summary import *
 class KataSummaryTest(unittest.TestCase):
 
   def test_empty_increments_to_csv(self):
-    self.assertEqual("", critter_increments([]))
+    self.assertEqual("", critter_increments_as_csv([]))
 
   def test_single_increments_to_csv(self):
     increment = [{'colour': 'amber', 'number': 1, 'time': [2018, 1, 7, 18, 9, 34]}]
