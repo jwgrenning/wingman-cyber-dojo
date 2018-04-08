@@ -15,16 +15,16 @@ Choose the exercise with or without a test harness based on your usual practices
 #### Without a test harness
 Choose one of these exercises if you do not regularly use a unit test harness in your work.
 
-* [C ----- without a test harness]()
-* [C++ -- without a test harness]()
+* [C ----- without a test harness](http://research.wingman-sw.com/enter/show/908C6C0075)
+* [C++ -- without a test harness](http://research.wingman-sw.com/enter/show/9BBBDDB8D5)
 * Read the instructions carefully and then press the test button before you begin.
 
 #### With a unit test harness
 
 Choose one of these exercises if you regularly use a unit test harness in your work.
 
-* [C ----- with a test harness]()
-* [C++ -- with a test harness]()
+* [C ----- with a test harness](http://research.wingman-sw.com/enter/show/EF50AE26BF)
+* [C++ -- with a test harness](http://research.wingman-sw.com/enter/show/79C8030A38)
 * Read the instructions carefully and then press the test button before you begin.
 
 
