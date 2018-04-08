@@ -1,0 +1,42 @@
+226 minutes
+38E40B280F-C-CppUTest-porcupine
+
+// I have given up after 11 times of compilation.
+// Looks like lot to study on basics.
+// RESTARTED AFTER 11TH ATTEMPT...
+//
+// Today I am giving my contact details... sorry in hurry 
+// I could not give yesterday
+//
+// email: rameshbv10@gmail.com
+// twitter: twitter.com/BVRamesh100
+//
+
+
+compiling CircularBuffer.c
+Building archive lib/libCircularBuffer.a
+r - objs/CircularBuffer.o
+r - objs/FormatOutput.o
+Linking CircularBuffer_tests
+Running CircularBuffer_tests
+......
+CircularBufferTest.cpp:145: error: Failure in TEST(CircularBuffer, put_to_full_does_not_damage_contents)
+	CHECK_TRUE(CircularBuffer_IsEmpty(buffer)) failed
+
+..
+CircularBufferTest.cpp:127: error: Failure in TEST(CircularBuffer, force_a_buffer_wraparound)
+	CHECK_TRUE(CircularBuffer_IsEmpty(buffer)) failed
+
+.
+CircularBufferTest.cpp:113: error: Failure in TEST(CircularBuffer, fill_then_empty)
+	CHECK_TRUE(CircularBuffer_IsEmpty(buffer)) failed
+
+........
+CircularBufferTest.cpp:56: error: Failure in TEST(CircularBuffer, is_empty_after_put_then_get)
+	CHECK_TRUE(CircularBuffer_IsEmpty(buffer)) failed
+
+....!
+Errors (4 failures, 22 tests, 21 ran, 30 checks, 1 ignored, 0 filtered out, 8 ms)
+
+/cpputest/build/MakefileWorker.mk:451: recipe for target 'all' failed
+make: *** [all] Error 4

@@ -1,0 +1,4 @@
+Sean Kenedy
+44 minutes + what ever happened to before the first checkin.
+Wrote a test harness
+Passes my tests
