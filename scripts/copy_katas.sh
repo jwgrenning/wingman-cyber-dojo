@@ -13,7 +13,9 @@ get_kata_ids()
   echo $ids  
 }
 
-KATA_DIR=../${1:=kata-capture}
+d=$1
+KATA_DIR=../${d:-kata-capture}
+
 mkdir -p $KATA_DIR
 
 for exercise in $(get_kata_ids); do
