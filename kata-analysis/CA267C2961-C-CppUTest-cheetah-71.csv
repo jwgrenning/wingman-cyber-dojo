@@ -1,4 +1,4 @@
-kata-analysis/CA267C2961-C-CppUTest-cheetah-71, signal, date, time, seconds, minutes, total seconds, total minutes
+kata-analysis/CA267C2961-C-CppUTest-cheetah-71, signal, date, time, seconds, minutes, total seconds, total minutes, discontinuity
   1, red  , 2018-02-12, 00:18:06,      0,      0.0,      0,      0.0
   2, amber, 2018-02-12, 00:26:46,    520,      8.0,    520,      8.0
   3, amber, 2018-02-12, 00:30:34,    228,      3.0,    748,     12.0

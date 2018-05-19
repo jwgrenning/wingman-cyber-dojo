@@ -1,4 +1,4 @@
-kata-analysis/2619424F5B-C-NTH-raccoon-29, signal, date, time, seconds, minutes, total seconds, total minutes, discontinuity
+kata-analysis/2619424F5B-C-NTH-raccoon-30, signal, date, time, seconds, minutes, total seconds, total minutes, discontinuity
   1, amber, 2018-02-11, 16:41:01,      0,      0.0,      0,      0.0
   2, amber, 2018-02-11, 16:44:32,    211,      3.0,    211,      3.0
   3, amber, 2018-02-11, 16:48:02,    210,      3.0,    421,      7.0
@@ -28,3 +28,4 @@ kata-analysis/2619424F5B-C-NTH-raccoon-29, signal, date, time, seconds, minutes,
  27, amber, 2018-02-11, 18:10:34,     30,      0.0,   5373,     89.0
  28, amber, 2018-02-11, 18:13:35,    181,      3.0,   5554,     92.0
  29, green, 2018-02-11, 21:37:31,  12236,    203.0,  17790,    296.0
+ 30, amber, 2018-02-28, 15:57:27,  65996,   1099.0,  83786,   1396.0

@@ -1,4 +1,4 @@
-kata-analysis/80F1E0CDE5-C-NTH-koala-7, signal, date, time, seconds, minutes, total seconds, total minutes
+kata-analysis/80F1E0CDE5-C-NTH-koala-7, signal, date, time, seconds, minutes, total seconds, total minutes, discontinuity
   1, amber, 2018-01-07, 18:09:34,      0,      0.0,      0,      0.0
   2, red  , 2018-01-07, 18:17:53,    499,      8.0,    499,      8.0
   3, red  , 2018-01-07, 18:18:36,     43,      0.0,    542,      9.0

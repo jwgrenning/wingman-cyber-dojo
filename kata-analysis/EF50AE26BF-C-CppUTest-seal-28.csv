@@ -1,4 +1,4 @@
-kata-analysis/EF50AE26BF-C-CppUTest-seal-28, signal, date, time, seconds, minutes, total seconds, total minutes
+kata-analysis/EF50AE26BF-C-CppUTest-seal-28, signal, date, time, seconds, minutes, total seconds, total minutes, discontinuity
   1, green, 2018-02-11, 16:59:54,      0,      0.0,      0,      0.0
   2, green, 2018-02-11, 17:01:14,     80,      1.0,     80,      1.0
   3, green, 2018-02-11, 17:06:46,    332,      5.0,    412,      6.0

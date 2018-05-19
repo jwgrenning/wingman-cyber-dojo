@@ -1,4 +1,4 @@
-kata-analysis/38E40B280F-C-CppUTest-porcupine-45, signal, date, time, seconds, minutes, total seconds, total minutes
+kata-analysis/38E40B280F-C-CppUTest-porcupine-45, signal, date, time, seconds, minutes, total seconds, total minutes, discontinuity
   1, red  , 2018-01-11, 13:37:20,      0,      0.0,      0,      0.0
   2, amber, 2018-01-11, 14:05:31,   1691,     28.0,   1691,     28.0
   3, amber, 2018-01-11, 14:44:52,   2361,     39.0,   4052,     67.0

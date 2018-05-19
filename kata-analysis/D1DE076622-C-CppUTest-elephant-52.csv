@@ -1,4 +1,4 @@
-kata-analysis/D1DE076622-C-CppUTest-elephant-52, signal, date, time, seconds, minutes, total seconds, total minutes
+kata-analysis/D1DE076622-C-CppUTest-elephant-52, signal, date, time, seconds, minutes, total seconds, total minutes, discontinuity
   1, red  , 2018-01-07, 20:21:42,      0,      0.0,      0,      0.0
   2, amber, 2018-01-07, 20:27:36,    354,      5.0,    354,      5.0
   3, amber, 2018-01-07, 20:28:16,     40,      0.0,    394,      6.0
