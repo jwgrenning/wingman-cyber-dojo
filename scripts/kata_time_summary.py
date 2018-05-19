@@ -64,8 +64,10 @@ def main(kata_capture_dir, kata_output_dir):
       output.write(output_filename + ", signal, date, time, seconds, minutes, total seconds, total minutes, discontinuity\n")
       output.write(lines)
       output.write("\nOriginal, kata: http://research.wingman-sw.com/kata/edit/" + exercise[:exercise.find('-')] + "?avatar=" + animal + "\n")
+      output.write("Reference tests, \n")      
       output.write("Passes tests\n")      
       output.write("Fails tests: #\n")      
+      output.write("Test coverag: #%\n")      
       output.write("\n")      
       output.close()
 
