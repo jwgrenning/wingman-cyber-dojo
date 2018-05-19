@@ -17,7 +17,7 @@ KATA_DIR=../${1:kata-capture}
 mkdir -p $KATA_DIR
 
 for exercise in $(get_kata_ids); do
-  echo "Copy: $exercise"
+  echo "Copy: ${exercise} to ${KATA_DIR}"
   dir1=${exercise:0:2}
   dir2=${exercise:2:8}
   docker cp cyber-dojo-storer:/usr/src/cyber-dojo/katas/$dir1/$dir2/ $KATA_DIR
