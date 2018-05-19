@@ -53,3 +53,8 @@ kata-analysis/C0E111DE2A-C-CppUTest-ostrich-54, signal, date, time, seconds, min
  52, green, 2018-05-17, 11:50:42,     36,      0.0,  74268,   1237.0
  53, green, 2018-05-17, 11:52:28,    106,      1.0,  74374,   1239.0
  54, amber, 2018-05-19, 15:11:26,  11938,    198.0,  86312,   1438.0
+
+Original, kata: http://research.wingman-sw.com/kata/edit/C0E111DE2A?avatar=ostrich
+Passes tests
+Fails tests: #
+

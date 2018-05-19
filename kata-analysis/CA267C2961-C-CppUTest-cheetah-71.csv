@@ -70,3 +70,8 @@ kata-analysis/CA267C2961-C-CppUTest-cheetah-71, signal, date, time, seconds, min
  69, green, 2018-02-12, 18:39:24,     85,      1.0,  66078,   1101.0
  70, green, 2018-02-12, 18:43:15,    231,      3.0,  66309,   1105.0
  71, green, 2018-02-12, 18:46:51,    216,      3.0,  66525,   1108.0
+
+Original, kata: http://research.wingman-sw.com/kata/edit/CA267C2961?avatar=cheetah
+Passes tests
+Fails tests: #
+

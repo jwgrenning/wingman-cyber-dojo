@@ -11,3 +11,8 @@ kata-analysis/C0E111DE2A-C-CppUTest-leopard-12, signal, date, time, seconds, min
  10, red  , 2018-05-09, 14:04:41,    447,      7.0,   7915,    131.0
  11, amber, 2018-05-09, 14:11:42,    421,      7.0,   8336,    138.0
  12, green, 2018-05-09, 14:12:04,     22,      0.0,   8358,    139.0
+
+Original, kata: http://research.wingman-sw.com/kata/edit/C0E111DE2A?avatar=leopard
+Passes tests
+Fails tests: #
+

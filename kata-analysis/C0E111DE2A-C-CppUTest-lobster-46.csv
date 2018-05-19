@@ -45,3 +45,8 @@ kata-analysis/C0E111DE2A-C-CppUTest-lobster-46, signal, date, time, seconds, min
  44, green, 2018-05-15, 08:24:00,     69,      1.0,  72393,   1206.0
  45, green, 2018-05-15, 08:24:40,     40,      0.0,  72433,   1207.0
  46, green, 2018-05-15, 08:25:53,     73,      1.0,  72506,   1208.0
+
+Original, kata: http://research.wingman-sw.com/kata/edit/C0E111DE2A?avatar=lobster
+Passes tests
+Fails tests: #
+

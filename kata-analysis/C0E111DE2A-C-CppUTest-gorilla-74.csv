@@ -73,3 +73,8 @@ kata-analysis/C0E111DE2A-C-CppUTest-gorilla-74, signal, date, time, seconds, min
  72, green, 2018-05-07, 08:51:51,     50,      0.0,   8029,    133.0
  73, green, 2018-05-07, 08:55:30,    219,      3.0,   8248,    137.0
  74, green, 2018-05-07, 08:56:07,     37,      0.0,   8285,    138.0
+
+Original, kata: http://research.wingman-sw.com/kata/edit/C0E111DE2A?avatar=gorilla
+Passes tests
+Fails tests: #
+

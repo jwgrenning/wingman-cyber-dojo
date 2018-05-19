@@ -24,3 +24,8 @@ kata-analysis/C0E111DE2A-C-CppUTest-lizard-25, signal, date, time, seconds, minu
  23, green, 2018-05-14, 12:36:07,    240,      4.0,   8300,    138.0
  24, green, 2018-05-14, 12:37:13,     66,      1.0,   8366,    139.0
  25, green, 2018-05-14, 12:41:57,    284,      4.0,   8650,    144.0
+
+Original, kata: http://research.wingman-sw.com/kata/edit/C0E111DE2A?avatar=lizard
+Passes tests
+Fails tests: #
+

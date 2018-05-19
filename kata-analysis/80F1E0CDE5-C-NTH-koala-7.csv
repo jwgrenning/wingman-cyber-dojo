@@ -6,3 +6,8 @@ kata-analysis/80F1E0CDE5-C-NTH-koala-7, signal, date, time, seconds, minutes, to
   5, green, 2018-01-07, 18:26:08,     19,      0.0,    994,     16.0
   6, amber, 2018-01-07, 18:31:45,    337,      5.0,   1331,     22.0
   7, green, 2018-01-07, 18:32:02,     17,      0.0,   1348,     22.0
+
+Original, kata: http://research.wingman-sw.com/kata/edit/80F1E0CDE5?avatar=koala
+Passes tests
+Fails tests: #
+

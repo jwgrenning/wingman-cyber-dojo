@@ -126,3 +126,8 @@ kata-analysis/38E40B280F-C-CppUTest-zebra-127, signal, date, time, seconds, minu
  125, green, 2018-02-08, 13:09:30,     61,      1.0,  59233,    987.0
  126, red  , 2018-02-08, 13:09:48,     18,      0.0,  59251,    987.0
  127, green, 2018-02-08, 13:11:03,     75,      1.0,  59326,    988.0
+
+Original, kata: http://research.wingman-sw.com/kata/edit/38E40B280F?avatar=zebra
+Passes tests
+Fails tests: #
+

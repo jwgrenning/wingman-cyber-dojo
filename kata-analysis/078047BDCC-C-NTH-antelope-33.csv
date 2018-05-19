@@ -32,3 +32,8 @@ kata-analysis/078047BDCC-C-NTH-antelope-33, signal, date, time, seconds, minutes
  31, green, 2018-01-17, 10:41:18,     29,      0.0,  14597,    243.0
  32, green, 2018-02-06, 07:07:38,  73580,   1226.0,   1777,     29.0
  33, green, 2018-02-06, 07:27:30,   1192,     19.0,   2969,     49.0
+
+Original, kata: http://research.wingman-sw.com/kata/edit/078047BDCC?avatar=antelope
+Passes tests
+Fails tests: #
+

@@ -64,3 +64,8 @@ kata-analysis/C0E111DE2A-C-CppUTest-porcupine-65, signal, date, time, seconds, m
  63, green, 2018-05-14, 15:31:18,     82,      1.0,   9643,    160.0
  64, green, 2018-05-14, 15:37:40,    382,      6.0,  10025,    167.0
  65, green, 2018-05-14, 15:44:09,    389,      6.0,  10414,    173.0
+
+Original, kata: http://research.wingman-sw.com/kata/edit/C0E111DE2A?avatar=porcupine
+Passes tests
+Fails tests: #
+

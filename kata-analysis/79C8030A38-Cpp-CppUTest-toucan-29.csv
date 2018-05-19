@@ -28,3 +28,8 @@ kata-analysis/79C8030A38-Cpp-CppUTest-toucan-29, signal, date, time, seconds, mi
  27, green, 2018-03-20, 19:28:22,     61,      1.0,   3886,     64.0
  28, green, 2018-03-20, 19:33:06,    284,      4.0,   4170,     69.0
  29, green, 2018-03-20, 19:34:51,    105,      1.0,   4275,     71.0
+
+Original, kata: http://research.wingman-sw.com/kata/edit/79C8030A38?avatar=toucan
+Passes tests
+Fails tests: #
+
