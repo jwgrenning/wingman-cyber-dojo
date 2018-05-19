@@ -32,6 +32,8 @@ kata-analysis/80F1E0CDE5-C-NTH-mouse-31, signal, date, time, seconds, minutes, t
  31, green, 2018-01-08, 02:55:13,    230,      3.0,   6856,    114.0
 
 Original, kata: http://research.wingman-sw.com/kata/edit/80F1E0CDE5?avatar=mouse
+Reference tests, 
 Passes tests
 Fails tests: #
+Test coverag: #%
 

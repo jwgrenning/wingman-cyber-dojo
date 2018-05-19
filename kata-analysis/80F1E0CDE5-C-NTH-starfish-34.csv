@@ -35,6 +35,8 @@ kata-analysis/80F1E0CDE5-C-NTH-starfish-34, signal, date, time, seconds, minutes
  34, green, 2018-01-07, 16:06:47,     62,      1.0,   2670,     44.0
 
 Original, kata: http://research.wingman-sw.com/kata/edit/80F1E0CDE5?avatar=starfish
+Reference tests, 
 Passes tests
 Fails tests: #
+Test coverag: #%
 

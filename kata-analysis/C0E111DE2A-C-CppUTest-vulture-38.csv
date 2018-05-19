@@ -39,6 +39,8 @@ kata-analysis/C0E111DE2A-C-CppUTest-vulture-38, signal, date, time, seconds, min
  38, green, 2018-05-15, 09:37:01,    329,      5.0,  11721,    195.0
 
 Original, kata: http://research.wingman-sw.com/kata/edit/C0E111DE2A?avatar=vulture
+Reference tests, 
 Passes tests
 Fails tests: #
+Test coverag: #%
 

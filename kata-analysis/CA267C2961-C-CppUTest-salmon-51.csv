@@ -52,6 +52,8 @@ kata-analysis/CA267C2961-C-CppUTest-salmon-51, signal, date, time, seconds, minu
  51, green, 2018-02-15, 21:13:53,    348,      5.0,   6645,    110.0
 
 Original, kata: http://research.wingman-sw.com/kata/edit/CA267C2961?avatar=salmon
+Reference tests, 
 Passes tests
 Fails tests: #
+Test coverag: #%
 

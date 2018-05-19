@@ -22,6 +22,8 @@ kata-analysis/078047BDCC-C-NTH-rhino-21, signal, date, time, seconds, minutes, t
  21, red  , 2018-02-13, 04:53:57,    167,      2.0,  45895,    764.0
 
 Original, kata: http://research.wingman-sw.com/kata/edit/078047BDCC?avatar=rhino
+Reference tests, 
 Passes tests
 Fails tests: #
+Test coverag: #%
 

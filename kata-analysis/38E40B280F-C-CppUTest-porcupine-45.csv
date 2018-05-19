@@ -46,6 +46,8 @@ kata-analysis/38E40B280F-C-CppUTest-porcupine-45, signal, date, time, seconds, m
  45, green, 2018-01-12, 06:07:29,    455,      7.0,  59409,    990.0
 
 Original, kata: http://research.wingman-sw.com/kata/edit/38E40B280F?avatar=porcupine
+Reference tests, 
 Passes tests
 Fails tests: #
+Test coverag: #%
 
