@@ -14,7 +14,7 @@ get_kata_ids()
 }
 
 d=$1
-KATA_DIR=../${d:-kata-capture}
+KATA_DIR=./${d:-kata-capture}
 
 mkdir -p $KATA_DIR
 
