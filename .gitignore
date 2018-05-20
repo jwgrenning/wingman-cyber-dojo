@@ -27,7 +27,6 @@ Releases
 cpputest
 *.sublime-*
 *.pyc
-kata-capture
 *.save
 
 
