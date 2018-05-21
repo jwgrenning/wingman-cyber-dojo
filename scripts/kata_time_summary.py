@@ -37,7 +37,7 @@ def critter_increments_as_csv(json_in):
       make_duration(last_time, incr['time']),
       make_duration(t0, incr['time']))
     last_time = incr['time']
-  return csv_lines
+  return str(csv_lines.count('\n')), csv_lines
 
 def make_dir_for(filename):
     if not os.path.exists(os.path.dirname(filename)):
@@ -47,29 +47,86 @@ def make_dir_for(filename):
             if exc.errno != errno.EEXIST:
                 raise
 
+def from_increments_filename(incr):
+    exercise = incr.split("/")[2]
+    kata_id = exercise.split("-")[0]
+    language = exercise.split("-")[1]
+    animal = incr.split("/")[3]
+    return kata_id, exercise, animal, language
+
+def write_kata_analysis(lines, kata_output_dir, exercise, animal, incr_count):
+  incr_count = lines.count('\n')
+  output_filename = kata_output_dir + "/" + exercise + "-" + animal + "-{}".format(incr_count)
+  if incr_count <= 5:
+    print "Skipping: " + output_filename
+  else:
+    make_dir_for(output_filename + ".csv")
+    output = open(output_filename + ".csv", "w")
+    print 'Writing', output_filename
+    output.write(output_filename + ", signal, date, time, seconds, minutes, total seconds, total minutes, discontinuity\n")
+    output.write(lines)
+    output.write("\nOriginal, kata: http://research.wingman-sw.com/kata/edit/" + exercise[:exercise.find('-')] + "?avatar=" + animal + "\n")
+    output.write("Reference tests, \n")
+    output.write("Passes tests\n")
+    output.write("Fails tests: #\n")
+    output.write("Test coverag: #%\n")
+    output.write("\n")
+    output.close()
+
+TGZ_DIR = './kata-code/'
+
+def tgz_filename(kata_id, animal, incr_count):
+  return TGZ_DIR + kata_id + '_' + animal + '_' + incr_count + '.tgz'
+
+def unpacked_dir(kata_id, animal, incr_count):
+  return TGZ_DIR + kata_id + '/' + animal + '/' + incr_count
+
+
+def get_code_tgz(kata_id, animal, incr_count):
+  wget_filename = 'http://research.wingman-sw.com/download_tag/' + kata_id + '/' + animal + '/' + incr_count
+  print 'Getting: ' + wget_filename
+  result = os.system('wget --append-output=wget.log ' + wget_filename)
+  if result == 0:
+    move_to = tgz_filename(kata_id, animal, incr_count)
+    make_dir_for(move_to)
+    os.rename(incr_count, move_to)
+
+def unpack_code(kata_id, animal, incr_count):
+  packed_filename = tgz_filename(kata_id, animal, incr_count)
+  print packed_filename + ": Unpacking"
+  if 0 != os.system('tar -C ' + TGZ_DIR + ' -xf ' + packed_filename):
+    print 'Error unpacking: ' + tgz_filename(kata_id, animal, incr_count)
+
+def make_authors_code(kata_id, animal, incr_count, language):
+  make_dir = unpacked_dir(kata_id, animal, incr_count)
+  os.system('cp scripts/my-tests/make-gcov.sh ' + make_dir)
+  os.system('cp scripts/my-tests/AllTests.cpp ' + make_dir)
+  os.system('cp scripts/my-tests/reference-makefile-' + language + '.mk ' + make_dir + '/reference-makefile.mk')
+  os.system('cp scripts/my-tests/CircularBufferTest-' + language + '.cpp ' + make_dir + '/CircularBufferTest-Ref.cpp')
+  print make_dir + ": Run reference tests with gcov"
+  os.system('(cd ' + make_dir + '; source make-gcov.sh >test_run_reference.txt)')
+  os.system('(cd ' + make_dir + '; grep ".*%   CircularBuffer.c" test_run_reference.txt)')
+  os.system('(cd ' + make_dir + '; grep "OK (.*)" test_run_reference.txt)')
+  os.system('(cd ' + make_dir + '; grep "Errors (.*)" test_run_reference.txt)')
+
+
 def main(kata_capture_dir, kata_output_dir):
-  increments = glob.glob("../" + kata_capture_dir + "/*/*/increments.json")
+  increments = glob.glob("./" + kata_capture_dir + "/C0E111DE2A-C-CppUTest/*/increments.json")
+  log = open("C0E111DE2A-Summary.log", "w")
   for incr in increments:
     timing = open(incr, "r")
-    lines = critter_increments_as_csv(json.load(timing))
-    incr_count = lines.count('\n')
-    exercise = incr.split("/")[2]
-    animal = incr.split("/")[3]
-    output_filename = kata_output_dir + "/" + exercise + "-" + animal + "-{}".format(incr_count)
-    if incr_count <= 5:
-      print "Skipping: " + output_filename
+    incr_count, lines = critter_increments_as_csv(json.load(timing))
+    if int(incr_count) <= 5:
+      log.write(incr + ": Skip\n")
+      print "\n------ Skipping: " + incr
     else:
-      make_dir_for(output_filename + ".csv")
-      output = open(output_filename + ".csv", "w")
-      output.write(output_filename + ", signal, date, time, seconds, minutes, total seconds, total minutes, discontinuity\n")
-      output.write(lines)
-      output.write("\nOriginal, kata: http://research.wingman-sw.com/kata/edit/" + exercise[:exercise.find('-')] + "?avatar=" + animal + "\n")
-      output.write("Reference tests, \n")      
-      output.write("Passes tests\n")      
-      output.write("Fails tests: #\n")      
-      output.write("Test coverag: #%\n")      
-      output.write("\n")      
-      output.close()
+      log.write(incr + "\n")
+      print "\n------ Doing: " + incr
+      kata_id, exercise, animal, language = from_increments_filename(incr)
+      write_kata_analysis(lines, kata_output_dir, exercise, animal, incr_count)
+      get_code_tgz(kata_id, animal, incr_count)
+      unpack_code(kata_id, animal, incr_count)
+      make_authors_code(kata_id, animal, incr_count, language)
 
 if __name__ == '__main__':
     kata_capture_dir = "kata-capture"
