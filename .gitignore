@@ -28,6 +28,8 @@ cpputest
 *.sublime-*
 *.pyc
 *.save
+kata-code/
+*.log
 
 
 

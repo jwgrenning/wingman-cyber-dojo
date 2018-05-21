@@ -1,6 +1,0 @@
-Total 397
-Test-driven with big tests
-Not done with small tests — need too look more
-Passes my tests!
-Code writes a lot of debug messages
-Code-a-little/test-a-little

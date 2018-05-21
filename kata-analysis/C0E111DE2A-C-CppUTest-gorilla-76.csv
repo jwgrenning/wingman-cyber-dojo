@@ -1,4 +1,4 @@
-kata-analysis/C0E111DE2A-C-CppUTest-gorilla-74, signal, date, time, seconds, minutes, total seconds, total minutes, discontinuity
+kata-analysis/C0E111DE2A-C-CppUTest-gorilla-76, signal, date, time, seconds, minutes, total seconds, total minutes, discontinuity
   1, red  , 2018-05-07, 06:38:02,      0,      0.0,      0,      0.0
   2, red  , 2018-05-07, 06:59:31,   1289,     21.0,   1289,     21.0
   3, amber, 2018-05-07, 07:15:28,    957,     15.0,   2246,     37.0
@@ -73,6 +73,8 @@ kata-analysis/C0E111DE2A-C-CppUTest-gorilla-74, signal, date, time, seconds, min
  72, green, 2018-05-07, 08:51:51,     50,      0.0,   8029,    133.0
  73, green, 2018-05-07, 08:55:30,    219,      3.0,   8248,    137.0
  74, green, 2018-05-07, 08:56:07,     37,      0.0,   8285,    138.0
+ 75, green, 2018-05-19, 16:41:35,  27928,    465.0,  36213,    603.0
+ 76, green, 2018-05-19, 16:42:05,     30,      0.0,  36243,    604.0
 
 Original, kata: http://research.wingman-sw.com/kata/edit/C0E111DE2A?avatar=gorilla
 Reference tests, 

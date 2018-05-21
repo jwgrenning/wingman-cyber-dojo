@@ -1,8 +1,0 @@
-263 minutes
-Breaks 140
-Total 120
-
-078047 antelope-33.csv
-Passes my tests
-Wrote a main that exercises the buffer and print when it mis behaves.
-The output is noisy, should be silent.
