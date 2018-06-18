@@ -14,12 +14,19 @@ def time_from(seq):
   return datetime.datetime(seq[0], seq[1], seq[2], seq[3], seq[4], seq[5])
 
 def make_duration(last, current):
+  # if last == None:
+  #   last = current
+  # t0 = time_from(last)
+  # t1 = time_from(current)
+  dt = delta_time(last, current)
+  return '{: 6d}, {: 8.1f}'.format(dt.seconds, dt.seconds/60.0)
+
+def delta_time(last, current):
   if last == None:
     last = current
   t0 = time_from(last)
   t1 = time_from(current)
-  dt = t1 - t0
-  return '{: 6d}, {: 8.1f}'.format(dt.seconds, dt.seconds/60)
+  return  t1 - t0
 
 def critter_increments_as_csv(json_in):
   csv_lines = ""
@@ -29,13 +36,22 @@ def critter_increments_as_csv(json_in):
     time_string = make_time(incr['time'])
     if t0 == None:
       t0 = incr['time']
-    csv_lines += "{: 3d}, {:5s}, {}, {}, {}, {}\n".format(
+
+    current_time = incr['time']
+    incr_duration = make_duration(last_time, current_time)
+    total_duration = make_duration(t0, current_time)
+    discontinuity = ''
+    dt = delta_time(last_time, current_time).seconds/60.0
+    if dt >= 10.0:
+      discontinuity = ', {: 8.1f}'.format(dt)
+    csv_lines += "{: 3d}, {:5s}, {}, {}, {}, {}{}\n".format(
       incr['number'],
       incr['colour'],
       make_date(incr['time']),
       time_string,
-      make_duration(last_time, incr['time']),
-      make_duration(t0, incr['time']))
+      incr_duration,
+      total_duration,
+      discontinuity)
     last_time = incr['time']
   return str(csv_lines.count('\n')), csv_lines
 
@@ -81,7 +97,6 @@ def tgz_filename(kata_id, animal, incr_count):
 def unpacked_dir(kata_id, animal, incr_count):
   return TGZ_DIR + kata_id + '/' + animal + '/' + incr_count
 
-
 def get_code_tgz(kata_id, animal, incr_count):
   wget_filename = 'http://research.wingman-sw.com/download_tag/' + kata_id + '/' + animal + '/' + incr_count
   print 'Getting: ' + wget_filename
@@ -93,32 +108,38 @@ def get_code_tgz(kata_id, animal, incr_count):
 
 def unpack_code(kata_id, animal, incr_count):
   packed_filename = tgz_filename(kata_id, animal, incr_count)
-  print packed_filename + ": Unpacking"
-  if 0 != os.system('tar -C ' + TGZ_DIR + ' -xf ' + packed_filename):
-    print 'Error unpacking: ' + tgz_filename(kata_id, animal, incr_count)
+  code_dir = unpacked_dir(kata_id, animal, incr_count)
+  if os.path.exists(code_dir):
+    print 'Directory already exists, NOT unpacking'
+  else:
+    print packed_filename + ": Unpacking"
+    if 0 != os.system('tar -C ' + TGZ_DIR + ' -xf ' + packed_filename):
+      print 'Error unpacking: ' + tgz_filename(kata_id, animal, incr_count)
+    else:
+      print "Adding in files to reference and gcov tesst run"
+      os.system('cp scripts/my-tests/make-gcov.sh ' + make_dir)
+      os.system('cp scripts/my-tests/AllTests.cpp ' + make_dir)
+      os.system('cp scripts/my-tests/reference-makefile-' + language + '.mk ' + ref_make_file)
+      os.system('cp scripts/my-tests/CircularBufferTest-' + language + '.cpp ' + make_dir + '/CircularBufferTest-Ref.cpp')
 
 def make_authors_code(kata_id, animal, incr_count, language):
   make_dir = unpacked_dir(kata_id, animal, incr_count)
-  os.system('cp scripts/my-tests/make-gcov.sh ' + make_dir)
-  os.system('cp scripts/my-tests/AllTests.cpp ' + make_dir)
-  os.system('cp scripts/my-tests/reference-makefile-' + language + '.mk ' + make_dir + '/reference-makefile.mk')
-  os.system('cp scripts/my-tests/CircularBufferTest-' + language + '.cpp ' + make_dir + '/CircularBufferTest-Ref.cpp')
-  print make_dir + ": Run reference tests with gcov"
+  ref_make_file = make_dir + '/reference-makefile.mk'
   os.system('(cd ' + make_dir + '; source make-gcov.sh >test_run_reference.txt)')
   os.system('(cd ' + make_dir + '; grep ".*%   CircularBuffer.c" test_run_reference.txt)')
   os.system('(cd ' + make_dir + '; grep "OK (.*)" test_run_reference.txt)')
   os.system('(cd ' + make_dir + '; grep "Errors (.*)" test_run_reference.txt)')
 
 
-def main(kata_capture_dir, kata_output_dir):
-  increments = glob.glob("./" + kata_capture_dir + "/C0E111DE2A-C-CppUTest/*/increments.json")
-  log = open("C0E111DE2A-Summary.log", "w")
+def main(kata_capture_dir, kata_output_dir, kata_id):
+  increments = glob.glob("./" + kata_capture_dir + "/" + kata_id + "-C-CppUTest/*/increments.json")
+  log = open(kata_id + "-Summary.log", "w")
   for incr in increments:
     timing = open(incr, "r")
     incr_count, lines = critter_increments_as_csv(json.load(timing))
     if int(incr_count) <= 5:
       log.write(incr + ": Skip\n")
-      print "\n------ Skipping: " + incr
+      print "\n------ Skipping: only " + incr_count + ' increments in ' + incr
     else:
       log.write(incr + "\n")
       print "\n------ Doing: " + incr
@@ -136,5 +157,8 @@ if __name__ == '__main__':
     if len(sys.argv) == 3:
       kata_output_dir = sys.argv[2]
 
-    print kata_capture_dir + " " + kata_output_dir
-    main(kata_capture_dir, kata_output_dir)
+    kata_id = '988ACE7E7B'
+
+    print kata_capture_dir + " " + kata_output_dir + kata_id
+
+    main(kata_capture_dir, kata_output_dir, kata_id)
