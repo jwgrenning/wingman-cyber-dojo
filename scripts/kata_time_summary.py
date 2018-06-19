@@ -14,10 +14,6 @@ def time_from(seq):
   return datetime.datetime(seq[0], seq[1], seq[2], seq[3], seq[4], seq[5])
 
 def make_duration(last, current):
-  # if last == None:
-  #   last = current
-  # t0 = time_from(last)
-  # t1 = time_from(current)
   dt = delta_time(last, current)
   return '{: 6d}, {: 8.1f}'.format(dt.seconds, dt.seconds/60.0)
 
