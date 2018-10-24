@@ -102,7 +102,7 @@ def get_code_tgz(kata_id, animal, incr_count):
     make_dir_for(move_to)
     os.rename(incr_count, move_to)
 
-def unpack_code(kata_id, animal, incr_count):
+def unpack_code(kata_id, animal, incr_count, language):
   packed_filename = tgz_filename(kata_id, animal, incr_count)
   code_dir = unpacked_dir(kata_id, animal, incr_count)
   if os.path.exists(code_dir):
@@ -112,7 +112,9 @@ def unpack_code(kata_id, animal, incr_count):
     if 0 != os.system('tar -C ' + TGZ_DIR + ' -xf ' + packed_filename):
       print 'Error unpacking: ' + tgz_filename(kata_id, animal, incr_count)
     else:
-      print "Adding in files to reference and gcov tesst run"
+      print "Adding in files to reference and gcov test run"
+      make_dir = unpacked_dir(kata_id, animal, incr_count)
+      ref_make_file = make_dir + '/reference-makefile.mk'
       os.system('cp scripts/my-tests/make-gcov.sh ' + make_dir)
       os.system('cp scripts/my-tests/AllTests.cpp ' + make_dir)
       os.system('cp scripts/my-tests/reference-makefile-' + language + '.mk ' + ref_make_file)
@@ -120,15 +122,15 @@ def unpack_code(kata_id, animal, incr_count):
 
 def make_authors_code(kata_id, animal, incr_count, language):
   make_dir = unpacked_dir(kata_id, animal, incr_count)
-  ref_make_file = make_dir + '/reference-makefile.mk'
   os.system('(cd ' + make_dir + '; source make-gcov.sh >test_run_reference.txt)')
   os.system('(cd ' + make_dir + '; grep ".*%   CircularBuffer.c" test_run_reference.txt)')
   os.system('(cd ' + make_dir + '; grep "OK (.*)" test_run_reference.txt)')
   os.system('(cd ' + make_dir + '; grep "Errors (.*)" test_run_reference.txt)')
+  os.system('(cd ' + make_dir + '; grep "Segmentation fault" test_run_reference.txt)')
 
 
 def main(kata_capture_dir, kata_output_dir, kata_id):
-  increments = glob.glob("./" + kata_capture_dir + "/" + kata_id + "-C-CppUTest/*/increments.json")
+  increments = glob.glob("./" + kata_capture_dir + "/" + kata_id + "-*/*/increments.json")
   log = open(kata_id + "-Summary.log", "w")
   for incr in increments:
     timing = open(incr, "r")
@@ -142,7 +144,7 @@ def main(kata_capture_dir, kata_output_dir, kata_id):
       kata_id, exercise, animal, language = from_increments_filename(incr)
       write_kata_analysis(lines, kata_output_dir, exercise, animal, incr_count)
       get_code_tgz(kata_id, animal, incr_count)
-      unpack_code(kata_id, animal, incr_count)
+      unpack_code(kata_id, animal, incr_count, language)
       make_authors_code(kata_id, animal, incr_count, language)
 
 if __name__ == '__main__':
@@ -153,8 +155,8 @@ if __name__ == '__main__':
     if len(sys.argv) == 3:
       kata_output_dir = sys.argv[2]
 
-    kata_id = '988ACE7E7B'
+    kata_id = '272CC23306'
 
-    print kata_capture_dir + " " + kata_output_dir + kata_id
+    print "From:" + kata_capture_dir + " To:" + kata_output_dir + " For:" + kata_id
 
     main(kata_capture_dir, kata_output_dir, kata_id)
