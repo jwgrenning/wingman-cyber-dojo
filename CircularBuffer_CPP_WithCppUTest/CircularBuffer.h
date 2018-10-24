@@ -13,7 +13,7 @@ class CircularBuffer
 
     bool isEmpty() const;
     bool isFull() const;
-    void put(int);
+    bool put(int);
     int get();
     int capacity() const;
 
